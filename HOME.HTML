@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>CARS INFORMATION MANAGEMENT</title>
+  <link rel="icon" href="LOGO.jpg">
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  body {
+    background-color: rgb(229, 242, 244);
+  }
+
+  ul {
+    background-color: rgb(116, 239, 245);
+    text-align: center;
+    box-shadow: 1px 1px 4px black;
+  }
+
+  ul li {
+    display: inline-block;
+    position: relative;
+  }
+
+  ul li a {
+    text-decoration: none;
+    display: flex;
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+  }
+
+  ul li ul.do {
+    display: none;
+    position: absolute;
+    width: 200%;
+  }
+
+  ul li a:hover {
+    color: rgb(167, 223, 225);
+    display: block;
+  }
+
+  ul li:hover ul.do {
+    border-radius: 5PX;
+    display: block;
+    width: 115px;
+  }
+
+  img {
+    margin-left: 80px;
+    margin-top: 40px;
+
+  }
+
+  .cle {
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 7px;
+  }
+
+  p {
+    font-size: 30px;
+    text-align: center;
+
+  }
+</style>
+
+<body>
+  <div class="cle">
+    <img src="LOGO.jpg" width="100px" height="100px" id="img">
+    <p>AKAGERA BUSINESS MOTOR</p>
+  </div>
+  <ul>
+    <li><a href="HOME.HTML">home</a></li>
+    <li><a href="Car room.HTML">Car room</a>
+    </li>
+    <li><a href="About us.html">about us</a>
+    </li>
+    <li><a href="Service.html">Service</a>
+    </li>
+
+  </ul>
+  <script>
+    var i = 0;
+    var images = [];
+    var time = 2000;
+
+    images[0] = "10im.jpg";
+    images[1] = "6im.jpg";
+    images[2] = "7im.jpg";
+    images[3] = "audrs7.jpg";
+    // images[4]="images5.";
+
+    function changeImg() {
+      document.slide.src = images[i];
+
+      if (i < images.length - 1) {
+        i++;
+      } else {
+        i = 0;
+      }
+      setTimeout("changeImg()", time);
+    }
+    window.onload = changeImg;
+  </script>
+  <img name="slide" width="1100px" height="500px">
+
+
+
+</body>
+
+</html>
